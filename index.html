@@ -69,9 +69,7 @@ span.psw {
 </head>
 <body>
 
-
-
-<form action="inicio" >
+<form id='login-form'>
   <div class="imgcontainer">
 
     <img src="ceibal-logo.png" alt="Imagen" class="avatar" alt="Imagen" class="Imagen">
@@ -98,6 +96,17 @@ span.psw {
     <span class="psw">¿Olvidaste tu <a href="#">Contraseña?</a></span>
   </div>
 </form>
-
 </body>
+
+<script>
+  form = document.getElementById('login-form');
+
+  form.addEventListener('submit', enviarForm);
+
+  function enviarForm(evento) {
+    evento.preventDefault();
+
+    window.location = 'inicio.html';
+  }
+</script>
 </html>
